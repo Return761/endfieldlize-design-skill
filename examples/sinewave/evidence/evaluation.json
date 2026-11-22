@@ -1,0 +1,260 @@
+{
+  "kind": "EvaluationReport",
+  "version": 1,
+  "target": "Sinewave",
+  "runAt": "2026-11-22T04:50:50.115Z",
+  "environment": "win32 / Node v24.19.0 / Chromium 159.0.4402.13",
+  "entries": [
+    {
+      "id": "desktop-0",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "baseline at 1440×1000",
+      "evidence": [
+        "no-overflow",
+        "desktop-0-initial.png"
+      ],
+      "viewport": "desktop"
+    },
+    {
+      "id": "desktop-1",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "select-and-play at 1440×1000",
+      "evidence": [
+        "click .map-node[data-track=\"1\"]",
+        "text #track-title Low Orbit",
+        "visible .track-row[data-track=\"1\"][aria-pressed=\"true\"]",
+        "click #play",
+        "property #audio paused equals false",
+        "property #audio currentTime gt 0.12",
+        "property #audio duration equals 25",
+        "desktop-1-playing.png",
+        "click #play",
+        "property #audio paused equals true"
+      ],
+      "viewport": "desktop"
+    },
+    {
+      "id": "desktop-2",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "seek-volume-keyboard at 1440×1000",
+      "evidence": [
+        "property #audio readyState gte 1",
+        "input #seek 9",
+        "property #audio currentTime gte 8.9",
+        "text #elapsed 0:09",
+        "press #volume Home",
+        "property #audio volume equals 0",
+        "press #volume End",
+        "property #audio volume equals 1",
+        "click #mute",
+        "property #audio muted equals true",
+        "click #mute",
+        "property #audio muted equals false",
+        "press #next Enter",
+        "text #track-title Low Orbit",
+        "press #previous Enter",
+        "text #track-title Glass Current"
+      ],
+      "viewport": "desktop"
+    },
+    {
+      "id": "desktop-3",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "long-title at 1440×1000",
+      "evidence": [
+        "click .track-row[data-track=\"3\"]",
+        "text #track-title An Index of Unfinished Transmissions",
+        "visible .map-node[data-track=\"3\"][aria-pressed=\"true\"]",
+        "no-overflow",
+        "desktop-3-long-title.png"
+      ],
+      "viewport": "desktop"
+    },
+    {
+      "id": "desktop-4",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "auto-advance at 1440×1000",
+      "evidence": [
+        "click #play",
+        "property #audio currentTime gt 0.05",
+        "input #seek 19.96",
+        "text #track-title Low Orbit",
+        "property #audio paused equals false",
+        "property #audio currentTime gt 0.07"
+      ],
+      "viewport": "desktop"
+    },
+    {
+      "id": "tablet-0",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "baseline at 800×900",
+      "evidence": [
+        "no-overflow",
+        "tablet-0-initial.png"
+      ],
+      "viewport": "tablet"
+    },
+    {
+      "id": "tablet-1",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "select-and-play at 800×900",
+      "evidence": [
+        "click .map-node[data-track=\"1\"]",
+        "text #track-title Low Orbit",
+        "visible .track-row[data-track=\"1\"][aria-pressed=\"true\"]",
+        "click #play",
+        "property #audio paused equals false",
+        "property #audio currentTime gt 0.12",
+        "property #audio duration equals 25",
+        "tablet-1-playing.png",
+        "click #play",
+        "property #audio paused equals true"
+      ],
+      "viewport": "tablet"
+    },
+    {
+      "id": "tablet-2",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "long-title at 800×900",
+      "evidence": [
+        "click .track-row[data-track=\"3\"]",
+        "text #track-title An Index of Unfinished Transmissions",
+        "visible .map-node[data-track=\"3\"][aria-pressed=\"true\"]",
+        "no-overflow",
+        "tablet-2-long-title.png"
+      ],
+      "viewport": "tablet"
+    },
+    {
+      "id": "mobile-0",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "baseline at 390×844",
+      "evidence": [
+        "no-overflow",
+        "mobile-0-initial.png"
+      ],
+      "viewport": "mobile"
+    },
+    {
+      "id": "mobile-1",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "select-and-play at 390×844",
+      "evidence": [
+        "click .map-node[data-track=\"1\"]",
+        "text #track-title Low Orbit",
+        "visible .track-row[data-track=\"1\"][aria-pressed=\"true\"]",
+        "click #play",
+        "property #audio paused equals false",
+        "property #audio currentTime gt 0.12",
+        "property #audio duration equals 25",
+        "mobile-1-playing.png",
+        "click #play",
+        "property #audio paused equals true"
+      ],
+      "viewport": "mobile"
+    },
+    {
+      "id": "mobile-2",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "seek-volume-keyboard at 390×844",
+      "evidence": [
+        "property #audio readyState gte 1",
+        "input #seek 9",
+        "property #audio currentTime gte 8.9",
+        "text #elapsed 0:09",
+        "press #volume Home",
+        "property #audio volume equals 0",
+        "press #volume End",
+        "property #audio volume equals 1",
+        "click #mute",
+        "property #audio muted equals true",
+        "click #mute",
+        "property #audio muted equals false",
+        "press #next Enter",
+        "text #track-title Low Orbit",
+        "press #previous Enter",
+        "text #track-title Glass Current"
+      ],
+      "viewport": "mobile"
+    },
+    {
+      "id": "mobile-3",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "long-title at 390×844",
+      "evidence": [
+        "click .track-row[data-track=\"3\"]",
+        "text #track-title An Index of Unfinished Transmissions",
+        "visible .map-node[data-track=\"3\"][aria-pressed=\"true\"]",
+        "no-overflow",
+        "mobile-3-long-title.png"
+      ],
+      "viewport": "mobile"
+    },
+    {
+      "id": "rendered-fonts",
+      "kind": "automated",
+      "status": "passed",
+      "claim": "Chromium used the bundled Montserrat on title and navigation and JetBrains Mono on timecode. The neutral backdrop and 320 px no-overflow check passed.",
+      "evidence": [
+        "font-check.json"
+      ],
+      "viewport": "mobile"
+    },
+    {
+      "id": "spacing-revision",
+      "kind": "reviewer",
+      "status": "observed",
+      "claim": "The earlier small-screen view placed two tempo-map markers too close together and compressed the title letters. The final image shows distinct markers and a legible title.",
+      "evidence": [
+        "mobile-before.png",
+        "mobile-0-initial.png",
+        "desktop-0-initial.png"
+      ],
+      "impact": "Adjacent markers should be visually distinguishable when picking a track.",
+      "reason": "Narrow x-space put more burden on the vertical spacing.",
+      "revision": "Increased mobile map height, adjusted the fixture texture coordinate and loosened the title tracking."
+    },
+    {
+      "id": "long-content-review",
+      "kind": "reviewer",
+      "status": "observed",
+      "claim": "The long track and artist names maintain a visible selection, transport and track index in the narrow view.",
+      "evidence": [
+        "mobile-3-long-title.png"
+      ]
+    },
+    {
+      "id": "pending-audition",
+      "kind": "unverified",
+      "status": "pending",
+      "claim": "Human headphone evaluation of balance and musical quality.",
+      "evidence": [],
+      "reason": "Browser automation verified actual media state and time progression. Human listening was outside this run."
+    }
+  ],
+  "artifacts": [
+    "desktop-0-initial.png",
+    "desktop-1-playing.png",
+    "desktop-3-long-title.png",
+    "tablet-0-initial.png",
+    "tablet-1-playing.png",
+    "tablet-2-long-title.png",
+    "mobile-0-initial.png",
+    "mobile-1-playing.png",
+    "mobile-3-long-title.png",
+    "mobile-before.png",
+    "font-check.json"
+  ]
+}

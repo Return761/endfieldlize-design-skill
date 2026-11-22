@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>图元工坊</title>
+  <link rel="icon" type="image/svg+xml" href="/mark.svg">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <a href="/" class="brand" aria-label="图元工坊">
+      <img src="/mark.svg" alt="" width="34" height="34">
+      <strong>图元工坊</strong>
+    </a>
+    <div class="mast-actions">
+      <button type="button" id="import-spec" class="button quiet">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h6l2 2h8v10H4zM4 7V5h7l2 2h7v2"/></svg><span>导入配置</span>
+      </button>
+      <input type="file" id="spec-file" accept="application/json,.json" hidden>
+      <details class="export" id="export" hidden>
+        <summary class="button primary">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg><span>导出</span>
+        </summary>
+        <div id="export-options" class="export-menu"></div>
+      </details>
+    </div>
+  </header>
+
+  <main class="studio">
+    <aside class="library" aria-label="图元库">
+      <div class="library-head">
+        <button id="library-toggle" class="library-heading" type="button" aria-expanded="true" aria-controls="library-body">
+          <span>图元库</span><span id="library-count" class="numeric">…</span>
+        </button>
+        <div class="library-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="5"/><path d="m14 14 5 5"/></svg>
+          <input id="search" type="search" placeholder="搜索图元" aria-label="搜索图元" autocomplete="off">
+          <kbd aria-hidden="true">/</kbd>
+        </div>
+      </div>
+      <div id="library-body" class="library-body"></div>
+    </aside>
+
+    <section class="workspace" aria-label="渲染预览">
+      <div class="workspace-head">
+        <div class="identity">
+          <h1 id="tool-title">同心圆</h1>
+          <p id="tool-id" class="numeric">concentricCircle</p>
+        </div>
+      </div>
+
+      <div class="sheet">
+        <div class="sheet-head">
+          <div class="sheet-label"><span class="sheet-led" aria-hidden="true"></span>预览</div>
+          <div class="zoom" role="group" aria-label="缩放">
+            <button id="zoom-out" type="button" aria-label="缩小" title="缩小">−</button>
+            <button id="zoom-fit" type="button" aria-label="适应画布" title="适应画布" class="numeric">100%</button>
+            <button id="zoom-in" type="button" aria-label="放大" title="放大">+</button>
+          </div>
+          <div class="backdrops" role="group" aria-label="预览背景">
+            <button type="button" data-backdrop="light" aria-label="浅色背景" title="浅色背景" aria-pressed="true"></button>
+            <button type="button" data-backdrop="dark" aria-label="深色背景" title="深色背景" aria-pressed="false"></button>
+            <button type="button" data-backdrop="check" aria-label="透明网格" title="透明网格" aria-pressed="false"></button>
+          </div>
+        </div>
+        <div class="stage" id="stage" data-backdrop="light">
+          <div class="ruler ruler-top" aria-hidden="true"></div>
+          <div class="ruler ruler-left" aria-hidden="true"></div>
+          <div class="stage-inner" id="stage-inner">
+            <div class="guide-frame" aria-hidden="true"></div>
+            <div class="art-wrap" id="art-wrap">
+              <img id="art" alt="当前图元预览" draggable="false" hidden>
+            </div>
+            <p id="empty-stage" class="stage-hint" hidden>请选择一张源图。</p>
+          </div>
+          <div class="stage-axis" aria-hidden="true">X ──<br>Y ┘</div>
+        </div>
+        <div class="sheet-foot">
+          <p id="status" role="status" aria-live="polite">正在载入图元</p>
+          <span id="canvas-size" class="numeric"></span>
+        </div>
+      </div>
+      <div class="workspace-foot" id="draw-controls" hidden>
+        <span id="canvas-tip"></span><button type="button" id="clear-marks" class="text-button">清除绘制</button>
+      </div>
+    </section>
+
+    <aside id="inspector" class="inspector" aria-label="参数" hidden>
+      <div class="inspector-head">
+        <h2>参数</h2>
+        <div class="inspector-actions">
+          <button id="example" type="button" class="text-button">示例</button>
+          <button id="reset" type="button" class="text-button">重置</button>
+        </div>
+      </div>
+      <div class="inspector-tabs" role="group" aria-label="参数视图">
+        <button id="fields-tab" type="button" aria-pressed="true">编辑</button>
+        <button id="json-tab" type="button" aria-pressed="false">JSON</button>
+      </div>
+      <div id="fields-pane" class="inspector-body"></div>
+      <div id="json-pane" class="inspector-body json-pane" hidden>
+        <label for="config-source">生成配置</label>
+        <textarea id="config-source" spellcheck="false" aria-label="生成配置"></textarea>
+        <button id="apply-json" class="button primary" type="button">应用配置</button>
+      </div>
+    </aside>
+  </main>
+  <input type="file" id="source-file" accept="image/*,.svg" hidden>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

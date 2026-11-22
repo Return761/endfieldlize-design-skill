@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f3f5">
+  <title>Sinewave · Listening station</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="wordmark" href="#top"><img src="mark.svg" width="32" height="32" alt=""> SINEWAVE</a>
+    <nav aria-label="Sections"><a href="#top">Now playing</a><a href="#library">Library</a></nav>
+    <span class="source">LOCAL AUDIO <span aria-hidden="true"></span></span>
+  </header>
+  <main id="top">
+    <section class="desk" aria-labelledby="title">
+      <div class="identity">
+        <p class="eyebrow"><span class="chip">◉</span> LISTENING STATION</p>
+        <h1 id="title">Sine<span>wave</span></h1>
+        <div class="current">
+          <p class="eyebrow" id="track-status">CUED / 01</p>
+          <h2 id="track-title">Glass Current</h2>
+          <p id="track-artist">Phase Array</p>
+          <dl>
+            <div><dt>Tempo</dt><dd id="tempo">096 <small>BPM</small></dd></div>
+            <div><dt>Key</dt><dd id="key">D MIN</dd></div>
+          </dl>
+        </div>
+      </div>
+      <figure class="scope">
+        <figcaption><span><b></b> OSCILLOSCOPE</span><span id="scope-mode">BUFFERED</span></figcaption>
+        <img class="face" src="assets/dial.svg" alt="">
+        <svg class="trace" viewBox="0 0 600 340" aria-hidden="true">
+          <line x1="0" y1="170" x2="600" y2="170" class="scope-axis"/>
+          <path id="trace-echo"></path><path id="trace-line"></path>
+        </svg>
+        <div class="scope-units" aria-hidden="true"><span>+1.0</span><span>0.0</span><span>−1.0</span></div>
+        <div class="scope-footer"><span>AMPLITUDE / MONO</span><span id="sample-rate">22.05 kHz</span></div>
+      </figure>
+    </section>
+    <section class="transport" aria-label="Playback controls">
+      <div class="play-controls">
+        <button id="previous" type="button" aria-label="Previous track" title="Previous track">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h2v14H5zm3 7 11-7v14z"/></svg>
+        </button>
+        <button id="play" type="button" aria-label="Play" title="Play or pause"><span id="play-glyph" aria-hidden="true">▶</span></button>
+        <button id="next" type="button" aria-label="Next track" title="Next track">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 5h2v14h-2zM5 5l11 7-11 7z"/></svg>
+        </button>
+      </div>
+      <div class="seek-control">
+        <div class="seek-times"><output id="elapsed">0:00</output><output id="duration">0:00</output></div>
+        <div class="scrubber">
+          <svg id="overview" viewBox="0 0 600 34" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <div class="seek-progress" aria-hidden="true"></div>
+          <input id="seek" type="range" min="0" max="1" step="0.01" value="0" aria-label="Playback position">
+        </div>
+      </div>
+      <div class="gain">
+        <button id="mute" type="button" aria-label="Mute" aria-pressed="false" title="Mute"><span aria-hidden="true">◖))</span></button>
+        <label for="volume">VOL</label><input id="volume" type="range" min="0" max="1" step="0.01" value="0.65" aria-label="Volume">
+        <output id="volume-value" for="volume">65%</output>
+      </div>
+      <audio id="audio" preload="metadata"></audio>
+      <p id="error" role="status" hidden></p>
+    </section>
+    <section class="library" id="library" aria-labelledby="library-title">
+      <div class="library-header"><h2 id="library-title">Signal library</h2><span id="track-count">5 TRACKS</span></div>
+      <div class="library-body">
+        <section class="map-plate" aria-labelledby="map-label">
+          <h3 id="map-label">TEMPO × TEXTURE</h3>
+          <div class="plot" id="plot" aria-label="Tracks positioned by tempo and texture">
+            <span class="ordinate" aria-hidden="true">DENSE</span><span class="ordinate soft" aria-hidden="true">SPARSE</span>
+            <span class="axis-caption" aria-hidden="true">TEMPO / BPM</span>
+            <div class="axis-ticks" aria-hidden="true"><span>60</span><span>90</span><span>120</span><span>150</span></div>
+          </div>
+        </section>
+        <section class="track-plate" aria-label="Track index">
+          <div class="track-head"><span>NO.</span><span>TRACK / ARTIST</span><span>BPM</span><span>TIME</span></div>
+          <ol id="track-list"></ol>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="player.js"></script>
+</body>
+</html>

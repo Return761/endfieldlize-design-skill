@@ -1,0 +1,20 @@
+{
+  "kind": "RahooSpec",
+  "version": 1,
+  "generator": "halftone",
+  "width": 1200,
+  "height": 860,
+  "seed": 17,
+  "settings": {
+    "params": {
+      "spacing": 32,
+      "minRadius": 3,
+      "maxRadius": 16,
+      "shape": "diamond",
+      "strokeOnly": true,
+      "strokeAlign": "outer",
+      "strokeWidth": 2,
+      "dotColor": "#2446ff"
+    }
+  }
+}

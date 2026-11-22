@@ -1,0 +1,273 @@
+{
+  "kind": "PrototypeSpec",
+  "version": 1,
+  "title": "Sinewave",
+  "target": "static-web",
+  "sourceDir": "web",
+  "entry": "index.html",
+  "interaction": "interaction.json",
+  "composition": "composition.json",
+  "pages": [
+    {
+      "id": "station",
+      "entry": "index.html",
+      "components": [
+        "signal scope",
+        "transport",
+        "tempo and texture map",
+        "track index"
+      ]
+    }
+  ],
+  "graphicAssets": [
+    {
+      "input": "dial.json",
+      "output": "assets/dial.svg"
+    }
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "tablet",
+      "width": 800,
+      "height": 900
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": true
+    }
+  ],
+  "tests": [
+    {
+      "id": "select-and-play",
+      "steps": [
+        {
+          "action": "click",
+          "selector": ".map-node[data-track=\"1\"]"
+        },
+        {
+          "action": "text",
+          "selector": "#track-title",
+          "value": "Low Orbit"
+        },
+        {
+          "action": "visible",
+          "selector": ".track-row[data-track=\"1\"][aria-pressed=\"true\"]"
+        },
+        {
+          "action": "click",
+          "selector": "#play"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "paused",
+          "operator": "equals",
+          "value": false
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "currentTime",
+          "operator": "gt",
+          "value": 0.12
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "duration",
+          "operator": "equals",
+          "value": 25
+        },
+        {
+          "action": "capture",
+          "name": "playing"
+        },
+        {
+          "action": "click",
+          "selector": "#play"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "paused",
+          "operator": "equals",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "seek-volume-keyboard",
+      "viewports": [
+        "desktop",
+        "mobile"
+      ],
+      "steps": [
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "readyState",
+          "operator": "gte",
+          "value": 1
+        },
+        {
+          "action": "input",
+          "selector": "#seek",
+          "value": "9"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "currentTime",
+          "operator": "gte",
+          "value": 8.9
+        },
+        {
+          "action": "text",
+          "selector": "#elapsed",
+          "value": "0:09"
+        },
+        {
+          "action": "press",
+          "selector": "#volume",
+          "value": "Home"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "volume",
+          "operator": "equals",
+          "value": 0
+        },
+        {
+          "action": "press",
+          "selector": "#volume",
+          "value": "End"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "volume",
+          "operator": "equals",
+          "value": 1
+        },
+        {
+          "action": "click",
+          "selector": "#mute"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "muted",
+          "operator": "equals",
+          "value": true
+        },
+        {
+          "action": "click",
+          "selector": "#mute"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "muted",
+          "operator": "equals",
+          "value": false
+        },
+        {
+          "action": "press",
+          "selector": "#next",
+          "value": "Enter"
+        },
+        {
+          "action": "text",
+          "selector": "#track-title",
+          "value": "Low Orbit"
+        },
+        {
+          "action": "press",
+          "selector": "#previous",
+          "value": "Enter"
+        },
+        {
+          "action": "text",
+          "selector": "#track-title",
+          "value": "Glass Current"
+        }
+      ]
+    },
+    {
+      "id": "long-title",
+      "steps": [
+        {
+          "action": "click",
+          "selector": ".track-row[data-track=\"3\"]"
+        },
+        {
+          "action": "text",
+          "selector": "#track-title",
+          "value": "An Index of Unfinished Transmissions"
+        },
+        {
+          "action": "visible",
+          "selector": ".map-node[data-track=\"3\"][aria-pressed=\"true\"]"
+        },
+        {
+          "action": "no-overflow"
+        },
+        {
+          "action": "capture",
+          "name": "long-title"
+        }
+      ]
+    },
+    {
+      "id": "auto-advance",
+      "viewports": [
+        "desktop"
+      ],
+      "steps": [
+        {
+          "action": "click",
+          "selector": "#play"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "currentTime",
+          "operator": "gt",
+          "value": 0.05
+        },
+        {
+          "action": "input",
+          "selector": "#seek",
+          "value": "19.96"
+        },
+        {
+          "action": "text",
+          "selector": "#track-title",
+          "value": "Low Orbit"
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "paused",
+          "operator": "equals",
+          "value": false
+        },
+        {
+          "action": "property",
+          "selector": "#audio",
+          "name": "currentTime",
+          "operator": "gt",
+          "value": 0.07
+        }
+      ]
+    }
+  ]
+}

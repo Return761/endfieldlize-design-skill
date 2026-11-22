@@ -1,0 +1,121 @@
+{
+  "kind": "GraphicSpec",
+  "version": 1,
+  "width": 700,
+  "height": 420,
+  "seed": "sinewave-plot-01",
+  "layers": [
+    {
+      "generator": "registrationMarks",
+      "params": {
+        "style": "corners",
+        "size": 14,
+        "inset": 6,
+        "color": "#52626d"
+      },
+      "opacity": 0.7
+    },
+    {
+      "generator": "concentricCircle",
+      "params": {
+        "count": 8,
+        "minRadius": 84,
+        "maxRadius": 289,
+        "minStroke": 0.65,
+        "maxStroke": 0.8,
+        "strokeColor": "#798985",
+        "startAngle": 8,
+        "arcAngle": 344
+      },
+      "x": 8,
+      "opacity": 0.59
+    },
+    {
+      "generator": "scaleCircle",
+      "params": {
+        "count": 120,
+        "radius": 158,
+        "rayLength": 6,
+        "majorInterval": 5,
+        "majorScale": 1.9,
+        "color": "#324957",
+        "strokeWidth": 0.75,
+        "arcAngle": 294,
+        "alignment": "outer",
+        "rotation": -16
+      },
+      "x": 8,
+      "opacity": 0.76
+    },
+    {
+      "generator": "arcs",
+      "params": {
+        "radius": 177,
+        "start": -133,
+        "sweep": 252,
+        "segments": 6,
+        "separation": 6,
+        "width": 2,
+        "color": "#213cff"
+      },
+      "x": 8,
+      "opacity": 0.91
+    },
+    {
+      "generator": "hudLines",
+      "params": {
+        "radius": 206,
+        "sweepAngle": 219,
+        "rotation": -25,
+        "strokeColor": "#354a57",
+        "lineWidth": 1,
+        "notchArc": 10,
+        "notchDepth": 11,
+        "subLineEnable": true,
+        "subLineOffset": 9,
+        "capStyle": "squareRing",
+        "capDotRadius": 2
+      },
+      "x": 8,
+      "opacity": 0.66
+    },
+    {
+      "generator": "linePattern",
+      "params": {
+        "direction": "diagonal",
+        "spacing": 5,
+        "angle": 44,
+        "lineColor": "#7a8984",
+        "range": "ring",
+        "ringOuter": 72,
+        "ringInner": 51
+      },
+      "x": 8,
+      "opacity": 0.59
+    },
+    {
+      "generator": "technicalLabels",
+      "params": {
+        "color": "#405263",
+        "fontSize": 9,
+        "labels": [
+          {
+            "x": 174,
+            "y": 109,
+            "dx": 33,
+            "dy": 24,
+            "text": "WINDOW / PCM"
+          },
+          {
+            "x": -183,
+            "y": -106,
+            "dx": -22,
+            "dy": -19,
+            "text": "SCOPE GRID"
+          }
+        ]
+      },
+      "opacity": 0.8
+    }
+  ]
+}

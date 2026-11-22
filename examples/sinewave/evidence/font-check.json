@@ -1,0 +1,43 @@
+{
+  "title": [
+    {
+      "familyName": "Montserrat Thin",
+      "postScriptName": "Montserrat-Thin-Black",
+      "isCustomFont": true,
+      "glyphCount": 8
+    }
+  ],
+  "navigation": [
+    {
+      "familyName": "Montserrat Thin",
+      "postScriptName": "Montserrat-Thin-Bold",
+      "isCustomFont": true,
+      "glyphCount": 11
+    }
+  ],
+  "timecode": [
+    {
+      "familyName": "JetBrains Mono",
+      "postScriptName": "JetBrains-Mono-Bold",
+      "isCustomFont": true,
+      "glyphCount": 4
+    }
+  ],
+  "palette": "rgb(242, 243, 245)",
+  "faces": [
+    {
+      "family": "Montserrat",
+      "status": "loaded"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "loaded"
+    }
+  ],
+  "assetHashesMatch": true,
+  "verifiedExportFiles": 23,
+  "smallViewport": {
+    "width": 320,
+    "scrollWidth": 320
+  }
+}

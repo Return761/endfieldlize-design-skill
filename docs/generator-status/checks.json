@@ -1,0 +1,156 @@
+{
+  "chromium": "159.0.4402.13",
+  "node": "v24.19.0",
+  "os": "win32",
+  "checkedCatalog": 29,
+  "checkedVariants": 6,
+  "verification": [
+    "normalization",
+    "deterministic SVG",
+    "XML parse",
+    "Chromium raster nonblank",
+    "PNG screenshot"
+  ],
+  "checks": [
+    {
+      "id": "concentricCircle",
+      "inkCoverage": 0.17314
+    },
+    {
+      "id": "halftone",
+      "inkCoverage": 0.18467
+    },
+    {
+      "id": "hudLines",
+      "inkCoverage": 0.03336
+    },
+    {
+      "id": "scaleCircle",
+      "inkCoverage": 0.04699
+    },
+    {
+      "id": "barcode",
+      "inkCoverage": 0.1391
+    },
+    {
+      "id": "waveTexture",
+      "inkCoverage": 0.20368
+    },
+    {
+      "id": "linePattern",
+      "inkCoverage": 0.10071
+    },
+    {
+      "id": "dotMatrix",
+      "inkCoverage": 0.05496
+    },
+    {
+      "id": "polygonGrid",
+      "inkCoverage": 0.41256
+    },
+    {
+      "id": "contour",
+      "inkCoverage": 0.30011
+    },
+    {
+      "id": "normalShape",
+      "inkCoverage": 0.09173
+    },
+    {
+      "id": "nestedPolygons",
+      "inkCoverage": 0.10692
+    },
+    {
+      "id": "globeSphere",
+      "inkCoverage": 0.11078
+    },
+    {
+      "id": "squareGrid",
+      "inkCoverage": 0.11344
+    },
+    {
+      "id": "rays",
+      "inkCoverage": 0.15646
+    },
+    {
+      "id": "y2kRing",
+      "inkCoverage": 0.03237
+    },
+    {
+      "id": "ringArray",
+      "inkCoverage": 0.06
+    },
+    {
+      "id": "fakeCode",
+      "inkCoverage": 0.11416
+    },
+    {
+      "id": "ascii",
+      "inkCoverage": 0.08031
+    },
+    {
+      "id": "dynamicLight",
+      "inkCoverage": 0.33431
+    },
+    {
+      "id": "arcs",
+      "inkCoverage": 0.04069
+    },
+    {
+      "id": "measurementGuides",
+      "inkCoverage": 0.0328
+    },
+    {
+      "id": "gridField",
+      "inkCoverage": 0.17147
+    },
+    {
+      "id": "registrationMarks",
+      "inkCoverage": 0.01647
+    },
+    {
+      "id": "geometricMask",
+      "inkCoverage": 0.7824
+    },
+    {
+      "id": "typographyOutlines",
+      "inkCoverage": 0.04751
+    },
+    {
+      "id": "technicalLabels",
+      "inkCoverage": 0.01564
+    },
+    {
+      "id": "signalBars",
+      "inkCoverage": 0.20911
+    },
+    {
+      "id": "waveform",
+      "inkCoverage": 0.11289
+    },
+    {
+      "id": "contour-pro",
+      "inkCoverage": 0.18095
+    },
+    {
+      "id": "dynamicLight-flame",
+      "inkCoverage": 0.53376
+    },
+    {
+      "id": "rays-speed",
+      "inkCoverage": 0.35076
+    },
+    {
+      "id": "y2kRing-stamp",
+      "inkCoverage": 0.03244
+    },
+    {
+      "id": "halftone-raster",
+      "inkCoverage": 0.01222
+    },
+    {
+      "id": "nestedPolygons-frame",
+      "inkCoverage": 0.11463
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "kind": "InteractionSpec",
+  "version": 1,
+  "title": "AI Conversation Atlas",
+  "jobs": [
+    {
+      "id": "resume",
+      "task": "Resume the failed evaluation branch in Research / Q4 without losing the decision record.",
+      "completion": "The branch, its last failure, and its parent are visible together."
+    },
+    {
+      "id": "compare",
+      "task": "Compare the failed branch with a measurement branch in another space and open the report they share.",
+      "completion": "Both outcomes and the exact shared report revision are visible."
+    }
+  ],
+  "entities": [
+    {
+      "id": "space",
+      "label": "Space",
+      "description": "Nested workspace with a stable ID and an inherited permission boundary."
+    },
+    {
+      "id": "thread",
+      "label": "Conversation",
+      "description": "Canonical content and status owned by one space, possibly referenced in others."
+    },
+    {
+      "id": "branch",
+      "label": "Task branch",
+      "description": "Owns a base conversation revision and independent run states."
+    },
+    {
+      "id": "artifact",
+      "label": "Artifact revision",
+      "description": "Immutable result with provenance. Access may be withheld in the current space."
+    }
+  ],
+  "relations": [
+    {
+      "from": "space",
+      "to": "space",
+      "label": "contains",
+      "multiplicity": "1:N"
+    },
+    {
+      "from": "space",
+      "to": "thread",
+      "label": "owns",
+      "multiplicity": "1:N"
+    },
+    {
+      "from": "thread",
+      "to": "branch",
+      "label": "forks",
+      "multiplicity": "1:N"
+    },
+    {
+      "from": "branch",
+      "to": "branch",
+      "label": "depends on",
+      "multiplicity": "N:N"
+    },
+    {
+      "from": "branch",
+      "to": "artifact",
+      "label": "reads or produces",
+      "multiplicity": "N:N"
+    }
+  ],
+  "states": [
+    {
+      "id": "atlas",
+      "description": "Spaces are collapsed to bounded clusters with branch state counts."
+    },
+    {
+      "id": "focus",
+      "description": "One object is selected with its path, immediate edges and focusable relation table."
+    },
+    {
+      "id": "compare",
+      "description": "Two branches are pinned by ID with aligned provenance and independent statuses."
+    },
+    {
+      "id": "unavailable",
+      "description": "The reference and its reason are visible. Private payloads are withheld."
+    },
+    {
+      "id": "run",
+      "description": "A distinct run attempt is in progress while the original failure remains inspectable."
+    }
+  ],
+  "initialState": "atlas",
+  "transitions": [
+    {
+      "from": "atlas",
+      "to": "focus",
+      "action": "Select cluster or object",
+      "effect": "Expand by scope and keep breadcrumbs and focus anchor."
+    },
+    {
+      "from": "focus",
+      "to": "focus",
+      "action": "Follow relation",
+      "effect": "Record the prior selection and move focus to related object."
+    },
+    {
+      "from": "focus",
+      "to": "compare",
+      "action": "Pin two branches",
+      "effect": "Compare by base revision and shared artifact IDs."
+    },
+    {
+      "from": "compare",
+      "to": "unavailable",
+      "action": "Open inaccessible revision",
+      "effect": "Show reason and retain comparison and focus anchor."
+    },
+    {
+      "from": "unavailable",
+      "to": "compare",
+      "action": "Back",
+      "effect": "Restore comparison without revealing private content."
+    },
+    {
+      "from": "focus",
+      "to": "run",
+      "action": "Retry failed run",
+      "effect": "Create a new attempt on the same branch with a new run ID."
+    },
+    {
+      "from": "compare",
+      "to": "focus",
+      "action": "Close comparison",
+      "effect": "Return to original selected branch."
+    },
+    {
+      "from": "focus",
+      "to": "atlas",
+      "action": "Return to overview",
+      "effect": "Restore previous cluster expansion and focus."
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "atlas",
+      "name": "Scope atlas",
+      "model": "Hierarchical graph with selectable spaces, branches and artifacts.",
+      "navigation": "From cluster → failure → cross-space dependency. Relation table offers equivalent keyboard actions.",
+      "hardCase": "Expand Research / Q4, focus Eval B, pin it, traverse the uses-report edge, pin Baseline C and open report v3 in compare.",
+      "tradeoff": "Compact for dependencies and deep spaces. High fan-out needs edge aggregation and progressive disclosure."
+    },
+    {
+      "id": "time",
+      "name": "Execution lanes",
+      "model": "Time-aligned branch lanes and run attempts around a pinned checkpoint.",
+      "navigation": "Select a time window, align lanes by base revision, then expand artifacts at a checkpoint.",
+      "hardCase": "Filter failed attempts, anchor Eval B at 14:02, open the sibling lane and align Baseline C on report v3 rather than wall time.",
+      "tradeoff": "Good for retries and chronology. A long-lived artifact spanning windows needs a pinned checkpoint and explicit time reset."
+    },
+    {
+      "id": "artifact",
+      "name": "Evidence index",
+      "model": "Artifact revisions are the primary objects. Conversations appear as linked citations.",
+      "navigation": "Search exact revision ID or a semantic facet, pivot between producers and consumers, then open a branch in context.",
+      "hardCase": "Search the incident label, select report v3, inspect failing consumer Eval B beside producing Baseline C, then reopen the original decision record.",
+      "tradeoff": "Direct for provenance, slower when users know the branch and have no artifact reference yet."
+    }
+  ],
+  "chosen": "atlas"
+}

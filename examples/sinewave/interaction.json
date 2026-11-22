@@ -1,0 +1,120 @@
+{
+  "kind": "InteractionSpec",
+  "version": 1,
+  "title": "Sinewave listening station",
+  "jobs": [
+    {
+      "id": "browse",
+      "task": "Find a slower sparse track in the tempo and texture map.",
+      "completion": "The selected track, artist, key and duration update together."
+    },
+    {
+      "id": "playback",
+      "task": "Play a track, seek to its middle and adjust monitoring level.",
+      "completion": "Real audio time, selection, progress and gain controls agree."
+    }
+  ],
+  "entities": [
+    {
+      "id": "track",
+      "label": "Track",
+      "description": "Original locally synthesized demo with tempo, key, texture and PCM."
+    },
+    {
+      "id": "queue",
+      "label": "Index",
+      "description": "Stable library ordering used by previous and next."
+    },
+    {
+      "id": "scope",
+      "label": "Oscilloscope",
+      "description": "Audio time-domain signal, with a buffered snapshot on pause."
+    }
+  ],
+  "relations": [
+    {
+      "from": "queue",
+      "to": "track",
+      "label": "orders",
+      "multiplicity": "1:N"
+    },
+    {
+      "from": "track",
+      "to": "scope",
+      "label": "supplies audio",
+      "multiplicity": "1:1"
+    }
+  ],
+  "states": [
+    {
+      "id": "cued",
+      "description": "Selected track is ready. Position and buffered signal are visible."
+    },
+    {
+      "id": "playing",
+      "description": "Audio advances and scope follows the current source."
+    },
+    {
+      "id": "error",
+      "description": "The failed operation shows a status and playback can be retried."
+    }
+  ],
+  "initialState": "cued",
+  "transitions": [
+    {
+      "from": "cued",
+      "to": "playing",
+      "action": "Play",
+      "effect": "Resume audio context and start the current track."
+    },
+    {
+      "from": "playing",
+      "to": "cued",
+      "action": "Pause",
+      "effect": "Preserve playback position and show a still time-domain trace."
+    },
+    {
+      "from": "playing",
+      "to": "playing",
+      "action": "Change track",
+      "effect": "Reset position and keep playing with the updated selection in both library projections."
+    },
+    {
+      "from": "cued",
+      "to": "cued",
+      "action": "Select track",
+      "effect": "Cue the new track while preserving pause."
+    },
+    {
+      "from": "playing",
+      "to": "error",
+      "action": "Audio failure",
+      "effect": "Expose recovery action in the controls."
+    },
+    {
+      "from": "error",
+      "to": "playing",
+      "action": "Retry",
+      "effect": "Attempt playback again under a user gesture."
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "plot",
+      "name": "Signal map and transport",
+      "model": "Tracks are points in tempo and texture space with an equivalent ordered index.",
+      "navigation": "Select a map point for discovery or use the named index, then seek within the selected recording.",
+      "hardCase": "Find a sparse track below 90 BPM, compare with the denser track near 120 BPM and jump midway.",
+      "tradeoff": "Exposes musical contrast immediately. Close points require an index or clustering as the library grows."
+    },
+    {
+      "id": "reel",
+      "name": "Continuous reel",
+      "model": "One composite timeline with contiguous recordings and intervals.",
+      "navigation": "Drag or move the playhead to a passage, use interval markers to cue adjacent clips.",
+      "hardCase": "Compare adjacent parts and reorder a run of clips while holding a reference passage.",
+      "tradeoff": "Fast for listening in sequence. Random access by texture requires a second index."
+    }
+  ],
+  "chosen": "plot"
+}

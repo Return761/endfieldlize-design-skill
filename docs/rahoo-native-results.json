@@ -1,0 +1,780 @@
+{
+  "release": "index-DmH-F12K.js",
+  "browser": "159.0.4402.13",
+  "platform": "win32",
+  "viewport": {
+    "width": 1040,
+    "height": 690
+  },
+  "verifiedAt": "2026-11-22T05:28:13.526Z",
+  "passed": 29,
+  "total": 29,
+  "results": [
+    {
+      "case": "concentricCircle",
+      "passed": true,
+      "original": {
+        "png": "84489de725e3afd481719943f91bdbafd78f4ec593d7878dbd3b5504e9dc3df3",
+        "svg": "be87eae389632f93ab292138df4983aae98ca071ac0646c19a32f630d67bdea5",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "84489de725e3afd481719943f91bdbafd78f4ec593d7878dbd3b5504e9dc3df3",
+        "svg": "be87eae389632f93ab292138df4983aae98ca071ac0646c19a32f630d67bdea5",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "901dec8ad547bf834486403b49b01adf762eeb9ce33f57b791e23df75343cb9b",
+        "svg": "846e8ab8810a5ab47dbb434916edd9327ccc093e39cd81f627e27d47f7178966",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "halftone",
+      "passed": true,
+      "original": {
+        "png": "6d73556f5fe4f03fe7047ab4b58d591d3737b21c43352f02ef8ce28b9bc71e93",
+        "svg": "41d9536a0a1e9cc91763b4be8681dfc282ef5bc776f29e334678dd520bcb2a66",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "6d73556f5fe4f03fe7047ab4b58d591d3737b21c43352f02ef8ce28b9bc71e93",
+        "svg": "41d9536a0a1e9cc91763b4be8681dfc282ef5bc776f29e334678dd520bcb2a66",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "a1a5918585c9da6a45a52dfcb4bce761ed501688664bcdb44408a03708dcc4c8",
+        "svg": "29e2cb4283ec52a1c68037737ebd546965ded86d690c479cc954174c75de91d5",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "hudLines",
+      "passed": true,
+      "original": {
+        "png": "c340bfe41d0b09e9b32fe2b9e302560c34f1c396a625644e82b9123f3e2435c9",
+        "svg": "237cbb232fcd00682cb1d9939915a770ccd57777cfb479fa4025c86d9656fd00",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "c340bfe41d0b09e9b32fe2b9e302560c34f1c396a625644e82b9123f3e2435c9",
+        "svg": "237cbb232fcd00682cb1d9939915a770ccd57777cfb479fa4025c86d9656fd00",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "5c169397828a9c404bf95af34fb70afaf22389731a832b168e2b022da449fe7e",
+        "svg": "bf744669aeae35dc0fba20878ad8ddb81bf8a203c1c633dbecb4d3604d9e0fc4",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "scaleCircle",
+      "passed": true,
+      "original": {
+        "png": "df3987f245831b3aa0eb89d2ed21c2f5c85fd4e78af1d351759d6564e20ea434",
+        "svg": "323f131f461b350a09452c8a243dcdea4f36cd67ef2ad7fa0a917131539faced",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "df3987f245831b3aa0eb89d2ed21c2f5c85fd4e78af1d351759d6564e20ea434",
+        "svg": "323f131f461b350a09452c8a243dcdea4f36cd67ef2ad7fa0a917131539faced",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "e546ad6c7c3217f2fd80f7e80d5f89ccf6a43a5481d3f1eb006854201be5f4dd",
+        "svg": "65a2ace8c010f8274dac1a3d871e4f9976640f4d2dcd4caaf03ee8c3833903a3",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "barcode",
+      "passed": true,
+      "original": {
+        "png": "9daf7bcff501a887e383b5502791680977c827778beadf1d077049c56d2a4547",
+        "svg": "92410e5160c9af7b4c10895cdced4b17794964464b9f73f7bf14b21bdf08417b",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "9daf7bcff501a887e383b5502791680977c827778beadf1d077049c56d2a4547",
+        "svg": "92410e5160c9af7b4c10895cdced4b17794964464b9f73f7bf14b21bdf08417b",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "0bf68e1cc54e738a19d057e99b3837a6ef616328d1c0763be623116433af92b2",
+        "svg": "92410e5160c9af7b4c10895cdced4b17794964464b9f73f7bf14b21bdf08417b",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "waveTexture",
+      "passed": true,
+      "original": {
+        "png": "14a6ddface91335fcc49875c11f9161c15939c5a46ef97f66e6fbc9d8b75b2b7",
+        "svg": "cb0a472f19bcbe106fc130d257613883d8f90eb149359184e2ec70ee6da3b02f",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "14a6ddface91335fcc49875c11f9161c15939c5a46ef97f66e6fbc9d8b75b2b7",
+        "svg": "cb0a472f19bcbe106fc130d257613883d8f90eb149359184e2ec70ee6da3b02f",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "0d63256bb7e6a5e28a8eb23d1ed480c1c6e1021b3ba39afebf5513a2ad3116fb",
+        "svg": "c347dbf52a816418577fbb8716caf3f3279e5334550c726398c6f56956973388",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "linePattern",
+      "passed": true,
+      "original": {
+        "png": "ee82a295daab429083e1432e602a784fd13e9caf0a84da955e03f9bb2539283c",
+        "svg": "a5abb58504c6a5bd772988c60aeff056ab299b4994ba190f153bc9b74d563d98",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "ee82a295daab429083e1432e602a784fd13e9caf0a84da955e03f9bb2539283c",
+        "svg": "a5abb58504c6a5bd772988c60aeff056ab299b4994ba190f153bc9b74d563d98",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "8c31d42d2fbdd1d41ce4783d9d5f0b8b1a19fc6f3b01d23c2c0b072133525fce",
+        "svg": "7b67ce9f6f19a855202224a1c0ac33817ec3b0b56e43289f8d238bbba7af5fe2",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "dotMatrix",
+      "passed": true,
+      "original": {
+        "png": "893ce6aa163471984d7528acd08b15b612ef540b4c59d516b959768c4bacfd60",
+        "svg": "401b493bf66b6f822d362e896fb0c48592ac835463d18c65d0fdeec344f6b3a4",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "893ce6aa163471984d7528acd08b15b612ef540b4c59d516b959768c4bacfd60",
+        "svg": "401b493bf66b6f822d362e896fb0c48592ac835463d18c65d0fdeec344f6b3a4",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "09bbef9b8bd7302c8cc27419de56ae50fc49b145a1472eaf6fcfab086ff7bb64",
+        "svg": "670e8bd9fecc1ac70fe3bec06c9352ff0055520419102f75de46bd7a833a7728",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "polygonGrid",
+      "passed": true,
+      "original": {
+        "png": "f388e9bed72e31ecffabd71e3deec6d7340d1f57ba1c739e7d2cac27944c5a82",
+        "svg": "9afe4ccbb1fce672418b99fe3edf4dd691817f314a97b2125933cbea02474386",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "f388e9bed72e31ecffabd71e3deec6d7340d1f57ba1c739e7d2cac27944c5a82",
+        "svg": "9afe4ccbb1fce672418b99fe3edf4dd691817f314a97b2125933cbea02474386",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "3102aa5cc2fdcf0a8d5c63b7e807f56b10dfd7d30bcf642abf14cb67b0d6bffc",
+        "svg": "4093e62856b490d8c8ff128dc64507f9f57bf9320247a96ceb30173f8ead9eab",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "contour",
+      "passed": true,
+      "original": {
+        "png": "a9ba3b3dbef16a63a60580191a487360082518f1a2bcff0aa653ef2ef8631758",
+        "svg": "56068097f07b010a108ff4cc7236d0bfdac82cfe6c12e173141e257cfb685b84",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "a9ba3b3dbef16a63a60580191a487360082518f1a2bcff0aa653ef2ef8631758",
+        "svg": "56068097f07b010a108ff4cc7236d0bfdac82cfe6c12e173141e257cfb685b84",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "b949d35deea653ccb733e5560c19d9204e22f96edbf86a6a8558968388fa31ca",
+        "svg": "1107f258e9190eff88fe45d141534e8b18a503154e98f65b3ab6fd55fc8ecb2b",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "normalShape",
+      "passed": true,
+      "original": {
+        "png": "59f8c12367e73a6cfe1c449a891132923459846ce90d3d885c7b535717dad269",
+        "svg": "0030d3ff1f714a0e97c771cb56e9db6577c9e44f732c236de340f598cba4acff",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "59f8c12367e73a6cfe1c449a891132923459846ce90d3d885c7b535717dad269",
+        "svg": "0030d3ff1f714a0e97c771cb56e9db6577c9e44f732c236de340f598cba4acff",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "a06ff075b2d3e7b3ce1b99db5481d2126d3c16352fc0685d892965e2369e243b",
+        "svg": "a53d99c509e01a5a8d95a8e43fd5053ec0b7d6f42e638c22ddf70b2642b2062e",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "nestedPolygons",
+      "passed": true,
+      "original": {
+        "png": "53fdb1afdc6a57c8eccd9ed3f707457b8be8209cf24d3f86a0b27a96acbd3e49",
+        "svg": "77c31e41058e71dda96fd4366621a2a8520d4d720330493c8017a60bad27eaea",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "53fdb1afdc6a57c8eccd9ed3f707457b8be8209cf24d3f86a0b27a96acbd3e49",
+        "svg": "77c31e41058e71dda96fd4366621a2a8520d4d720330493c8017a60bad27eaea",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "2e43b1b13ff920d5b314fc23bf146a973086f80f2bb4302c3b1748f6cba2d704",
+        "svg": "c3e32ea1487850242bd575097bcc47e9392dcac078cc3a55ec1edcbbb3ea5a53",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "globeSphere",
+      "passed": true,
+      "original": {
+        "png": "027176d84ac9f61310b24b99caf55f76b8ee6357ae013c56d56f3577c92dffd2",
+        "svg": "99a8a4a9a6e182c605afcb7932e8bfea9ed08e00950766edd564afd0a9330f80",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "027176d84ac9f61310b24b99caf55f76b8ee6357ae013c56d56f3577c92dffd2",
+        "svg": "99a8a4a9a6e182c605afcb7932e8bfea9ed08e00950766edd564afd0a9330f80",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "cb3f2a7f71a8127dee69c0da351512cabd96fdafdb067084d688e4c7e56f64b2",
+        "svg": "816e0a9999eb914c7ff9c17832b75974c19974554472b3e55dd17d5f0a3bebfa",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "squareGrid",
+      "passed": true,
+      "original": {
+        "png": "0c528ced64e7321ed8b7ea19e4f12b90662d6910df3aef4d74096cf04fb3d51f",
+        "svg": "ee21654a52f4fb2048c2ec834761efa213a1ec679ffc3420358aa8063ad91dfc",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "0c528ced64e7321ed8b7ea19e4f12b90662d6910df3aef4d74096cf04fb3d51f",
+        "svg": "ee21654a52f4fb2048c2ec834761efa213a1ec679ffc3420358aa8063ad91dfc",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "39bdc9fdcca68b7675f40eafee52cc82501ded218144765100ec4454406f59f3",
+        "svg": "fb268342924ea62f048af62ca450e15f0bc7e1568cc2c6f8890a5ae2b9bc56e9",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "rays",
+      "passed": true,
+      "original": {
+        "png": "879622df212c71dd2f7b180e6d8b020fe84306aa8c1c2f07ee1caf03d21ad57f",
+        "svg": "6d4837f4b10343e97c8c8651459353dbb22e477a6154018530da31deddd7ecf2",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "879622df212c71dd2f7b180e6d8b020fe84306aa8c1c2f07ee1caf03d21ad57f",
+        "svg": "6d4837f4b10343e97c8c8651459353dbb22e477a6154018530da31deddd7ecf2",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "598c98bce1c1d96d3f0b8cfd33b73dbba843c84868f552775628b9fb20df1b79",
+        "svg": "745ced574c2f59c2c69bae542c543311df9d4ee6844cce73e91c14609dd0caaa",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "y2kRing",
+      "passed": true,
+      "original": {
+        "png": "ed1ef6390014a029830b4875abae02a0c409d5786bbbb5d75ef9d5f2b599b56e",
+        "svg": "bec6e4cd21e6097186169aa07782c98ff5a3e28bea03954db8df297815bfaa31",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "ed1ef6390014a029830b4875abae02a0c409d5786bbbb5d75ef9d5f2b599b56e",
+        "svg": "bec6e4cd21e6097186169aa07782c98ff5a3e28bea03954db8df297815bfaa31",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "d85e914a0e1ef565427691ebe05877525095f3c73454d75721bd17787cb46ada",
+        "svg": "d344cf415f330a967a99aa16ad64971e25b27fffe2847832a45ac3cc2cfccb24",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "ringArray",
+      "passed": true,
+      "original": {
+        "png": "e179201d76295a4002b69784509c66b48ecef155fcaad3de6d1c0a41775ccc81",
+        "svg": "4084591374f7256cbb5c7ff5ec8cdd58e54d60d54407f75cc4f1b0bb0547ae07",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "e179201d76295a4002b69784509c66b48ecef155fcaad3de6d1c0a41775ccc81",
+        "svg": "4084591374f7256cbb5c7ff5ec8cdd58e54d60d54407f75cc4f1b0bb0547ae07",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "cc08e1749966cbaa44a57e9c3c46430f4d4fd86109fd3124a431755f4adb25d2",
+        "svg": "64fa78b206ce3825952501bee7cd3568088674551f81a076fe051106dd595284",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "fakeCode",
+      "passed": true,
+      "original": {
+        "png": "db208aa00870fe4731e344480c4293ffded56a6837db4881e648cad710172c61",
+        "svg": "317620a6523cfde73c97fd142c4d164ace0dd90aeacd9cb4f6b091fb74f68946",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "db208aa00870fe4731e344480c4293ffded56a6837db4881e648cad710172c61",
+        "svg": "317620a6523cfde73c97fd142c4d164ace0dd90aeacd9cb4f6b091fb74f68946",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "5d2d075c5f944bc5d52d547f16b10b24a7d0de7ea904ea3ddccfb35f5a12fa7d",
+        "svg": "6b38da2736885ed674f8419fdd063960ce4703c8361763d0b8ed9b307bb93383",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "case": "ascii",
+      "passed": true,
+      "original": {
+        "png": "e06b69a8d5efad5d2f79d1cdee5399cbba8de767ee7a972588f5720e8d05ae97",
+        "svg": null,
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "e06b69a8d5efad5d2f79d1cdee5399cbba8de767ee7a972588f5720e8d05ae97",
+        "svg": null,
+        "size": [
+          690,
+          643
+        ]
+      },
+      "modified": {
+        "png": "64d772c15dd9591c07024e66c65d0b2dd16a45fac8848e68d5932d6bb1b44b94",
+        "svg": null,
+        "size": [
+          690,
+          643
+        ]
+      },
+      "nativeFormats": [
+        "png"
+      ]
+    },
+    {
+      "case": "dynamicLight",
+      "passed": true,
+      "original": {
+        "png": "08756d55158f7d216e039c3f8fd8865e9e32a832e01b36b606d57bb23da859fc",
+        "svg": null,
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      "native": {
+        "png": "08756d55158f7d216e039c3f8fd8865e9e32a832e01b36b606d57bb23da859fc",
+        "svg": null,
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      "modified": {
+        "png": "5f67ce866df4398c9e09b68853725f7706fd8a4b5fca3daf3761b4fdba6355cf",
+        "svg": null,
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      "nativeFormats": [
+        "png"
+      ]
+    },
+    {
+      "case": "contour-pro-native-3d",
+      "passed": true,
+      "original": {
+        "png": "d53727d2784dd25e78a6d159c567739f6c7f590777190cc3a2337b41aee0ba3f",
+        "svg": "0a0756f01cd9a13b6d60afc0f7439a0255bcc591c551fbd8c22aed3c716d4c1b",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "d53727d2784dd25e78a6d159c567739f6c7f590777190cc3a2337b41aee0ba3f",
+        "svg": "0a0756f01cd9a13b6d60afc0f7439a0255bcc591c551fbd8c22aed3c716d4c1b",
+        "size": [
+          690,
+          643
+        ]
+      }
+    },
+    {
+      "case": "barcode-spectrum-ui-equivalence",
+      "passed": true,
+      "original": {
+        "png": "f635408008575aa072b1489ed443d0d859417b62d05b82320500c03b559e8c59",
+        "svg": "92410e5160c9af7b4c10895cdced4b17794964464b9f73f7bf14b21bdf08417b",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "f635408008575aa072b1489ed443d0d859417b62d05b82320500c03b559e8c59",
+        "svg": "92410e5160c9af7b4c10895cdced4b17794964464b9f73f7bf14b21bdf08417b",
+        "size": [
+          690,
+          643
+        ]
+      }
+    },
+    {
+      "case": "barcode-ruler-ui-equivalence",
+      "passed": true,
+      "original": {
+        "png": "a7e1008951fd9551dd005722872f69c404c1a856b63148afccc08bf7cedd1062",
+        "svg": "92410e5160c9af7b4c10895cdced4b17794964464b9f73f7bf14b21bdf08417b",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "a7e1008951fd9551dd005722872f69c404c1a856b63148afccc08bf7cedd1062",
+        "svg": "92410e5160c9af7b4c10895cdced4b17794964464b9f73f7bf14b21bdf08417b",
+        "size": [
+          690,
+          643
+        ]
+      }
+    },
+    {
+      "case": "concentric-circle-ui-equivalence",
+      "passed": true,
+      "original": {
+        "png": "901dec8ad547bf834486403b49b01adf762eeb9ce33f57b791e23df75343cb9b",
+        "svg": "846e8ab8810a5ab47dbb434916edd9327ccc093e39cd81f627e27d47f7178966",
+        "size": [
+          690,
+          643
+        ]
+      },
+      "native": {
+        "png": "901dec8ad547bf834486403b49b01adf762eeb9ce33f57b791e23df75343cb9b",
+        "svg": "846e8ab8810a5ab47dbb434916edd9327ccc093e39cd81f627e27d47f7178966",
+        "size": [
+          690,
+          643
+        ]
+      }
+    },
+    {
+      "case": "dynamic-light-time",
+      "passed": true,
+      "original": {
+        "png": "5bf61564e2279693e68cbf5a86874c5e4e60a69144f068a1a5ef28de9ad51f37",
+        "svg": null,
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      "native": {
+        "png": "5bf61564e2279693e68cbf5a86874c5e4e60a69144f068a1a5ef28de9ad51f37",
+        "svg": null,
+        "size": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "case": "dynamic-light-webm-export",
+      "passed": true,
+      "filename": "dynamic-light-1s-loop.webm",
+      "bytes": 2416406,
+      "sha256": "8a1ad4cd17424e23e4fe9ade40790a48e35e914254fbf13dedf234537ac8cb8e"
+    },
+    {
+      "case": "nested-polygons-gif-export",
+      "passed": true,
+      "filename": "nested-polygons-240x240-1795325290327.gif",
+      "bytes": 13878,
+      "sha256": "09feeb6be512ef89fbaa5f4a9a24aa3c4e07fc81b59bd5c911fb62bd11207ca9"
+    },
+    {
+      "case": "nested-polygons-mp4-export",
+      "passed": true,
+      "filename": "nested-polygons-240x240-1795325292412.mp4",
+      "bytes": 16075,
+      "sha256": "8d059205ae37e5b60225d13904fededc37f69bf492d1cd699cb083f4dc843ef5"
+    },
+    {
+      "case": "ascii-native-text-export",
+      "passed": true,
+      "filename": "ascii-art-325x171.txt",
+      "bytes": 55745,
+      "sha256": "1fe39ae5de34e5d6fe4898dec2ee64f147d6ee47926b16a6846dc3994406fdd0"
+    }
+  ]
+}

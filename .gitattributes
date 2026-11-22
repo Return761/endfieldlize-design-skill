@@ -1,0 +1,2 @@
+# Preserve the upstream bytes used by the offline Rahoo integrity check.
+vendor/rahoo/** -text

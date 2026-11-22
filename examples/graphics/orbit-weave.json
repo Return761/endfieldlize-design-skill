@@ -1,0 +1,48 @@
+{
+  "kind": "GraphicSpec",
+  "version": 1,
+  "width": 720,
+  "height": 420,
+  "seed": "orbital-weave-37",
+  "background": "#f2f3f5",
+  "layers": [
+    {
+      "generator": "gridField",
+      "params": {
+        "pattern": "dots",
+        "spacing": 20,
+        "width": 0.8,
+        "color": "#969fa6"
+      }
+    },
+    {
+      "generator": "orbitWeave",
+      "params": {
+        "threads": 26,
+        "spread": 0.4
+      }
+    },
+    {
+      "generator": "registrationMarks",
+      "params": {
+        "style": "corners",
+        "color": "#263847",
+        "center": true
+      }
+    },
+    {
+      "generator": "technicalLabels",
+      "params": {
+        "labels": [
+          {
+            "x": -190,
+            "y": -74,
+            "dx": -63,
+            "dy": -40,
+            "text": "ORBIT / 3:2"
+          }
+        ]
+      }
+    }
+  ]
+}

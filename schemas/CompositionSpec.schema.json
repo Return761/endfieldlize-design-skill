@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CompositionSpec",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "CompositionSpec"
+    },
+    "version": {
+      "const": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1800
+    },
+    "layout": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 3200
+    },
+    "typography": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "rule": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 900
+          }
+        },
+        "required": [
+          "role",
+          "rule"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 200
+    },
+    "layers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$"
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "placement": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "generator": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?:[\\w.-]+/)*[\\w.-]+$"
+          }
+        },
+        "required": [
+          "id",
+          "role",
+          "placement"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 200
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1800
+      },
+      "minItems": 1,
+      "maxItems": 200
+    },
+    "responsive": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "when": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "behavior": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1200
+          }
+        },
+        "required": [
+          "when",
+          "behavior"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 200
+    },
+    "motion": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1800
+    }
+  },
+  "required": [
+    "kind",
+    "version",
+    "title",
+    "intent",
+    "layout",
+    "typography",
+    "layers",
+    "constraints",
+    "responsive",
+    "motion"
+  ],
+  "additionalProperties": false
+}

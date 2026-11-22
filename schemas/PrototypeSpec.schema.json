@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PrototypeSpec",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "const": "PrototypeSpec"
+    },
+    "version": {
+      "const": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "target": {
+      "const": "static-web"
+    },
+    "sourceDir": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?:[\\w.-]+/)*[\\w.-]+$"
+    },
+    "entry": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?:[\\w.-]+/)*[\\w.-]+$"
+    },
+    "interaction": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?:[\\w.-]+/)*[\\w.-]+$"
+    },
+    "composition": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?:[\\w.-]+/)*[\\w.-]+$"
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$"
+          },
+          "entry": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?:[\\w.-]+/)*[\\w.-]+$"
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            "minItems": 1,
+            "maxItems": 200
+          }
+        },
+        "required": [
+          "id",
+          "entry",
+          "components"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 200
+    },
+    "graphicAssets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "input": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?:[\\w.-]+/)*[\\w.-]+$"
+          },
+          "output": {
+            "type": "string",
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(/|$))(?:[\\w.-]+/)*[\\w.-]+$"
+          }
+        },
+        "required": [
+          "input",
+          "output"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 200
+    },
+    "viewports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 280,
+            "maximum": 3000
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 320,
+            "maximum": 2400
+          },
+          "reducedMotion": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "width",
+          "height"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 12
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "enum": [
+                        "click",
+                        "visible"
+                      ]
+                    },
+                    "selector": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "selector"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "enum": [
+                        "text",
+                        "fill",
+                        "press",
+                        "input"
+                      ]
+                    },
+                    "selector": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240
+                    },
+                    "value": {
+                      "type": "string",
+                      "maxLength": 1200
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "selector",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "enum": [
+                        "property"
+                      ]
+                    },
+                    "selector": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 240
+                    },
+                    "name": {
+                      "enum": [
+                        "paused",
+                        "ended",
+                        "currentTime",
+                        "duration",
+                        "volume",
+                        "value",
+                        "readyState",
+                        "muted"
+                      ]
+                    },
+                    "operator": {
+                      "enum": [
+                        "equals",
+                        "gt",
+                        "gte"
+                      ]
+                    },
+                    "value": {
+                      "type": [
+                        "number",
+                        "boolean",
+                        "string"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "selector",
+                    "name",
+                    "operator",
+                    "value"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "enum": [
+                        "no-overflow"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "action"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "action": {
+                      "enum": [
+                        "capture"
+                      ]
+                    },
+                    "name": {
+                      "type": "string",
+                      "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$"
+                    }
+                  },
+                  "required": [
+                    "action",
+                    "name"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 40
+          },
+          "viewports": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$"
+            },
+            "minItems": 1,
+            "maxItems": 12
+          }
+        },
+        "required": [
+          "id",
+          "steps"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 50
+    }
+  },
+  "required": [
+    "kind",
+    "version",
+    "title",
+    "target",
+    "sourceDir",
+    "entry",
+    "pages",
+    "graphicAssets",
+    "viewports",
+    "tests"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,47 @@
+{
+  "kind": "CompositionSpec",
+  "version": 1,
+  "title": "Sinewave signal plate",
+  "intent": "Use the provided industrial graphic direction through scale, asymmetric massing and measured signal traces.",
+  "layout": "A heavy two-line typographic block is balanced by a larger technical plot. Its horizontal axis continues into the dark transport, followed by synchronized spatial and text library views.",
+  "typography": [
+    {
+      "role": "Title",
+      "rule": "Oversized Montserrat fills the left mass with HarmonyOS Sans as the fallback. Blue marks the second line."
+    },
+    {
+      "role": "Interface labels and numeric readouts",
+      "rule": "Use the same sans stack for labels. Use JetBrains Mono for axes, time, track numbers and numeric readings."
+    }
+  ],
+  "layers": [
+    {
+      "id": "dial",
+      "role": "Reference geometry for a scale-like scope face",
+      "placement": "Under the live signal with muted lines",
+      "generator": "dial.json"
+    },
+    {
+      "id": "trace",
+      "role": "Time-domain waveform fed by current audio",
+      "placement": "Main axis of the scope"
+    },
+    {
+      "id": "transport",
+      "role": "Primary play, seek and monitor controls",
+      "placement": "Dark strip across both panels"
+    }
+  ],
+  "constraints": [
+    "Use neutral gray-white and black surfaces. Use blue for focus, selection and signal. Keep utility text clear of the trace and registration marks.",
+    "Preserve an equivalent list for spatial library selection.",
+    "Keep long titles inside the information column."
+  ],
+  "responsive": [
+    {
+      "when": "620 CSS pixels and narrower",
+      "behavior": "Stack the title, scope, transport and library. Reflow gain controls onto a second line."
+    }
+  ],
+  "motion": "Display live analyser time-domain data during playback. Use a buffered sample during pause and reduced motion. The scrubber remains usable in all modes."
+}
